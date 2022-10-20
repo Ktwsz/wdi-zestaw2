@@ -13,8 +13,9 @@ def foo(n):
     a, b = 0, 1
     while b <= 1000000:
         a, b = b, a+b
-        if gen(a, b, n):
-            return True
+        if n % a == 0:
+            if gen(a, b, n):
+                return True
     return False
 
 print(foo(int(input())))
